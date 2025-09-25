@@ -1,0 +1,440 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', system-ui, sans-serif;
+ }
+
+ body {
+     background: #0f0b1d;
+     color: #fff;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ body::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background:
+         radial-gradient(circle at 20% 80%, rgba(106, 13, 173, 0.15) 0%, transparent 50%),
+         radial-gradient(circle at 80% 20%, rgba(74, 0, 224, 0.1) 0%, transparent 50%);
+     z-index: -1;
+ }
+
+ .container {
+     text-align: center;
+     max-width: 900px;
+     width: 100%;
+     padding: 60px 40px;
+     position: relative;
+ }
+
+ .header {
+     margin-bottom: 60px;
+ }
+
+ h1 {
+     font-size: 4.5rem;
+     font-weight: 800;
+     margin-bottom: 15px;
+     background: linear-gradient(135deg, #b967ff 0%, #6a0dad 100%);
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     letter-spacing: -1px;
+     line-height: 1.1;
+ }
+
+ h2 {
+     font-size: 1.6rem;
+     font-weight: 400;
+     color: #b19cd9;
+     letter-spacing: 3px;
+     text-transform: uppercase;
+     margin-bottom: 40px;
+     position: relative;
+     display: inline-block;
+ }
+
+ h2::after {
+     content: '';
+     position: absolute;
+     bottom: -10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 40px;
+     height: 2px;
+     background: linear-gradient(90deg, transparent, #b967ff, transparent);
+ }
+
+ .guitar-container {
+     position: relative;
+     margin: 60px auto;
+     width: 300px;
+     height: 400px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .guitar {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+ }
+
+ .guitar-body {
+     width: 220px;
+     height: 140px;
+     background: linear-gradient(145deg, #1a1035, #2d1b4e);
+     border-radius: 45% 45% 50% 50%;
+     position: absolute;
+     bottom: 0;
+     box-shadow:
+         0 15px 30px rgba(0, 0, 0, 0.4),
+         inset 0 -5px 15px rgba(106, 13, 173, 0.3),
+         inset 0 5px 15px rgba(255, 255, 255, 0.05);
+     border: 1px solid rgba(106, 13, 173, 0.3);
+ }
+
+ .guitar-body::before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 70px;
+     height: 70px;
+     border: 2px solid rgba(185, 103, 255, 0.4);
+     border-radius: 50%;
+     box-shadow: 0 0 20px rgba(185, 103, 255, 0.2);
+ }
+
+ .guitar-body::after {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 40px;
+     height: 40px;
+     border: 1px solid rgba(185, 103, 255, 0.6);
+     border-radius: 50%;
+ }
+
+ .guitar-neck {
+     width: 40px;
+     height: 220px;
+     background: linear-gradient(to right, #160e29, #2a1a4a);
+     position: absolute;
+     bottom: 140px;
+     border-radius: 8px;
+     box-shadow:
+         0 5px 15px rgba(0, 0, 0, 0.3),
+         inset 0 0 10px rgba(0, 0, 0, 0.2);
+     border-left: 1px solid rgba(185, 103, 255, 0.2);
+     border-right: 1px solid rgba(185, 103, 255, 0.2);
+ }
+
+ .guitar-head {
+     width: 70px;
+     height: 50px;
+     background: linear-gradient(145deg, #160e29, #24173f);
+     position: absolute;
+     bottom: 360px;
+     border-radius: 8px 8px 0 0;
+     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     padding: 0 10px;
+ }
+
+ .tuning-peg {
+     width: 8px;
+     height: 8px;
+     background: #b967ff;
+     border-radius: 50%;
+     box-shadow: 0 0 10px #b967ff;
+ }
+
+ .guitar-strings {
+     position: absolute;
+     width: 100%;
+     height: 220px;
+     bottom: 140px;
+     display: flex;
+     justify-content: center;
+     gap: 12px;
+ }
+
+ .string {
+     width: 1px;
+     height: 100%;
+     background: linear-gradient(to bottom, transparent, #f0e6ff, transparent);
+     position: relative;
+     opacity: 0.8;
+ }
+
+ .string::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 3px;
+     height: 3px;
+     background: #f0e6ff;
+     border-radius: 50%;
+     box-shadow: 0 0 5px #f0e6ff;
+ }
+
+ .string::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 3px;
+     height: 3px;
+     background: #f0e6ff;
+     border-radius: 50%;
+     box-shadow: 0 0 5px #f0e6ff;
+ }
+
+ .reflection {
+     position: absolute;
+     top: 30px;
+     left: 30px;
+     width: 60px;
+     height: 20px;
+     background: rgba(255, 255, 255, 0.1);
+     border-radius: 50%;
+     transform: rotate(-30deg);
+     filter: blur(5px);
+ }
+
+ h3 {
+     font-size: 2rem;
+     font-weight: 600;
+     color: #b967ff;
+     margin-top: 40px;
+     position: relative;
+     display: inline-block;
+     padding: 0 20px;
+ }
+
+ h3::before,
+ h3::after {
+     content: '✧';
+     margin: 0 15px;
+     color: #6a0dad;
+     font-size: 1.5rem;
+ }
+
+ /* Animaciones */
+ @keyframes float {
+
+     0%,
+     100% {
+         transform: translateY(0) rotate(0deg);
+     }
+
+     33% {
+         transform: translateY(-10px) rotate(0.5deg);
+     }
+
+     66% {
+         transform: translateY(5px) rotate(-0.5deg);
+     }
+ }
+
+ .guitar-container {
+     animation: float 8s ease-in-out infinite;
+ }
+
+ .string {
+     animation: stringVibrate 3s ease-in-out infinite;
+ }
+
+ .string:nth-child(1) {
+     animation-delay: 0.1s;
+ }
+
+ .string:nth-child(2) {
+     animation-delay: 0.2s;
+ }
+
+ .string:nth-child(3) {
+     animation-delay: 0.3s;
+ }
+
+ .string:nth-child(4) {
+     animation-delay: 0.4s;
+ }
+
+ .string:nth-child(5) {
+     animation-delay: 0.5s;
+ }
+
+ .string:nth-child(6) {
+     animation-delay: 0.6s;
+ }
+
+ @keyframes stringVibrate {
+
+     0%,
+     100% {
+         transform: scaleY(1);
+         opacity: 0.8;
+     }
+
+     50% {
+         transform: scaleY(1.05);
+         opacity: 1;
+     }
+ }
+
+ @keyframes glow {
+
+     0%,
+     100% {
+         text-shadow: 0 0 10px rgba(185, 103, 255, 0.5);
+     }
+
+     50% {
+         text-shadow: 0 0 20px rgba(185, 103, 255, 0.8), 0 0 30px rgba(185, 103, 255, 0.4);
+     }
+ }
+
+ h1 {
+     animation: glow 4s ease-in-out infinite;
+ }
+
+ /* Efectos de partículas */
+ .particles {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+ }
+
+ .particle {
+     position: absolute;
+     width: 2px;
+     height: 2px;
+     background: #b967ff;
+     border-radius: 50%;
+     opacity: 0;
+     animation: particleFloat 10s linear infinite;
+ }
+
+ @keyframes particleFloat {
+     0% {
+         transform: translateY(100vh) translateX(0);
+         opacity: 0;
+     }
+
+     10% {
+         opacity: 0.7;
+     }
+
+     90% {
+         opacity: 0.7;
+     }
+
+     100% {
+         transform: translateY(-100px) translateX(100px);
+         opacity: 0;
+     }
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+     h1 {
+         font-size: 3rem;
+     }
+
+     h2 {
+         font-size: 1.2rem;
+     }
+
+     h3 {
+         font-size: 1.5rem;
+     }
+
+     .guitar-container {
+         width: 250px;
+         height: 350px;
+     }
+
+     .guitar-body {
+         width: 180px;
+         height: 120px;
+     }
+
+     .guitar-neck {
+         height: 180px;
+         bottom: 120px;
+     }
+
+     .guitar-head {
+         bottom: 300px;
+     }
+
+     .guitar-strings {
+         height: 180px;
+         bottom: 120px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     h1 {
+         font-size: 2.5rem;
+     }
+
+     .container {
+         padding: 40px 20px;
+     }
+
+     .guitar-container {
+         width: 200px;
+         height: 280px;
+     }
+
+     .guitar-body {
+         width: 150px;
+         height: 100px;
+     }
+
+     .guitar-neck {
+         height: 150px;
+         bottom: 100px;
+         width: 30px;
+     }
+
+     .guitar-head {
+         bottom: 250px;
+         width: 60px;
+         height: 40px;
+     }
+
+     .guitar-strings {
+         height: 150px;
+         bottom: 100px;
+         gap: 10px;
+     }
+ }
