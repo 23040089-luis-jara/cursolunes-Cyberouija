@@ -1,0 +1,73 @@
+/* Footer */
+footer {
+    position: relative;
+    margin-top: 300px; /* Ajusta este valor según la cantidad de bottom/top de tus cards */
+    width: 100%;
+    background: linear-gradient(135deg, #8a8a8a, #036903);
+    color: #f1f1f1;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.uadec-footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+.uadec-footer-logo img {
+    width: 200px;
+    height: 130px;
+    transition: transform 0.3s ease;
+}
+.uadec-footer-logo img:hover {
+    transform: scale(1.1);
+}
+.uadec-footer-address span,
+.uadec-footer-contact span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 5px;
+}
+.uadec-footer-address p,
+.uadec-footer-contact p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #e6e6e6;
+}
+.uadec-footer-contact img {
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.uadec-social-media {
+    margin-top: 15px;
+}
+.uadec-social-media a {
+    display: inline-block;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+.uadec-social-media a img {
+    width: 28px;
+    height: 28px;
+}
+.uadec-social-media a:hover {
+    transform: scale(1.2);
+}
+.uadec-footer-terms {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #ddd;
+}
+/* Footer end */

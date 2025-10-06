@@ -1,0 +1,96 @@
+.navbar-container {
+    height: 50px; 
+    min-height: 50px; 
+    padding: 20px 50px; /* espacio arriba/abajo y a los lados */
+    width: 100%; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    position: absolute; /* Asegura que el navbar esté en la parte superior de la pantalla */
+    left: 0; /* Para que no esté restringido por el contenedor */
+}
+.top-line {
+    width: 100%;                 /* el ancho que ya tenías */
+    height: 10px;               /* grosor de la franja */
+    background-color: #036903;  /* color */
+    position: fixed;            /* para que se quede encima */
+    top: 0;                     /* siempre arriba */
+    left: 0;                    /* puedes moverla con left */
+    z-index: 1050;              /* encima del nav */
+}
+.navbar-nav .nav-link {
+    font-size: 20px; 
+    color: #036903; 
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 20px; /* Aumenta el área de clic */
+    border-radius: 20px; /* Botón redondo */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #030303;
+}
+
+.navbar-nav .nav-link:active, .navbar-nav .nav-link.active {
+    color: white !important;
+    border-radius: 20px !important; /* Mantiene la forma redonda */
+    padding: 10px 20px; /* Tamaño uniforme */
+    transition: none; /* Evita cambios bruscos */
+}
+.navbar-brand {
+    margin-left: +120px; /* Mueve la imagen más a la izquierda */
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    height: 70px; /* Ajusta la altura del logo */
+    max-width: 100%; /* Evita que se desborde */
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+}
+@media (max-width: 992px) {
+    .navbar-container {
+        padding: 15px 30px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .navbar-brand {
+        margin-left: 60px;
+    }
+
+    .navbar-brand img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .navbar-brand {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand img {
+        height: 50px;
+    }
+}
